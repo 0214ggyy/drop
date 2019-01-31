@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li{
+			float: left;
+			width: 200px;
+			height: 100px;
+			margin: 100px 0;
+			position: relative;
+			/*border: 1px solid red;*/
+			transform:rotate3d(1,1,0,0deg);
+			transform-style: preserve-3d;
+			transition: transform 4s;
+			
+		}
+		li div{
+			width: 200px;
+			height: 100px;
+			position: absolute;
+			/*opacity: 0.5;*/
+			font-size: 20px;
+			text-align: center;
+			line-height: 100px;
+		}
+		.front{
+			background-color: green;
+			transform: translateZ(50px);
+		}
+		.back{
+			background-color: green;
+			transform: translateZ(-50px) rotateY(180deg);
+		}
+		.top{
+			background-color: yellow;
+			transform: translateY(-50px) rotateX(90deg);
+		}
+		.bottom{
+			background-color: yellow;
+			transform: translateY(50px) rotateX(-90deg);
+		}
+		li:hover{
+			transform:rotateX(-360deg);
+		}
+	</style>
+</head>
+<body>
+		<ol>
+			<li>
+				<div class="front">想挑战的，一个一个来</div>
+				<div class="back">能群殴，何必单挑呢</div>
+				<div class="top">想挑战的，一个一个来</div>
+				<div class="bottom">能群殴，何必单挑呢</div>
+			</li>
+			<li>
+				<div class="front">前端</div>
+				<div class="back">前端</div>
+				<div class="top">传智</div>
+				<div class="bottom">传智</div>
+			</li>
+			<li>
+				<div class="front">前端</div>
+				<div class="back">前端</div>
+				<div class="top">传智</div>
+				<div class="bottom">传智</div>
+			</li>
+			<li>
+				<div class="front">一篇诗</div>
+				<div class="back">一斗酒</div>
+				<div class="top">一曲长歌</div>
+				<div class="bottom">一剑天涯</div>
+			</li>
+		</ol>
+</body>
+</html>

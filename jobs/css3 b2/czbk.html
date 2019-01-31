@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+
+	}
+	body{
+		background-color: skyblue;
+	}
+	.bigbox{
+		width: 1000px;
+			height: 200px;
+			margin: 100px auto;
+	}
+		.box{
+			float: left;
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform-style:preserve-3d; 
+		}
+		.box div{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			font-size: 100px;
+			color: #000;
+
+		}
+		.c1{
+			transition: transform 5s;
+			/*background-color: red;*/
+			/*transform: translateZ(100px);*/
+
+		}
+		.c3{
+			transition: transform 5s;
+			/*background-color: pink;*/
+			/*transform: translateZ(-100px);*/
+		}
+		.bigbox:hover .c1{
+			color:#fff; 
+			transform-origin: left;
+			transform:rotateY(-70deg) skew(0deg,15deg);
+		}
+		.bigbox:hover .c3{
+			color:#ccc; 
+			font-size: 100px;
+			transform-origin: left;
+			transform:rotateY(30deg) skew(0deg,20deg) scale(1.5);
+		}
+	</style>
+</head>
+<body>
+<div class="bigbox">
+	<div class="box">
+			<div class="c1">王</div>
+			<div class="c2">王</div>
+			<div class="c3">王</div>
+	</div>
+	<div class="box">
+			<div class="c1">者</div>
+			<div class="c2">者</div>
+			<div class="c3">者</div>
+	</div>
+	<div class="box">
+			<div class="c1">荣</div>
+			<div class="c2">荣</div>
+			<div class="c3">荣</div>
+	</div>
+	<div class="box">
+			<div class="c1">耀</div>
+			<div class="c2">耀</div>
+			<div class="c3">耀</div>
+	</div>
+</div>
+	
+</body>
+</html>
